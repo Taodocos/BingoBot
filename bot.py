@@ -3,11 +3,12 @@ import requests
 import time
 import sys
 
-TOKEN = '7862722469:AAH8Mk7a8FlWpkKKoNo-gVoOWeeGoTdHPjY'
+TOKEN = os.getenv('TOKEN')
+MONGO_URI = os.getenv('MONGO_URI')
 BASE_URL = f'https://api.telegram.org/bot{TOKEN}'
 
 # MongoDB connection
-client = MongoClient('mongodb://localhost:27017/')
+client = MongoClient(MONGO_URI)
 db = client['BingoDB']
 users_collection = db['users']
 
