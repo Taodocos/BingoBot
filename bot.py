@@ -2,6 +2,7 @@ from pymongo import MongoClient
 import requests
 import time
 import sys
+import os
 
 TOKEN = os.getenv('TOKEN')
 MONGO_URI = os.getenv('MONGO_URI')
